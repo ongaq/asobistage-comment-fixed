@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "アソビステージ特定のコメント固定",
+	"description": "アソビステージ特定のコメント固定",
+	"version": "0.1.0",
+	"minimum_chrome_version": "88",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://vc.asobistore.jp/asobistage/*"
+			],
+			"js": ["main.js"],
+			"run_at": "document_end",
+			"all_frames": true
+		}
+	],
+	"permissions": [
+		"storage",
+		"https://vc.asobistore.jp/asobistage/*"
+	]
+}
